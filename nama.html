@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUJA KERANG AJAIB</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5fa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #form-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 22px);
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: #001f3f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #001f3f;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="form-box">
+        <form id="submitForm" action="/PujaKerangAjaib" method="POST">
+            <label for="nama">Hey, who are you?</label>
+            <input type="text" id="nama" name="nama" required>
+            <button type="button" onclick="submitForm('GET')">GET</button>
+            <button type="button" onclick="submitForm('POST')">POST</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm(method) {
+            const form = document.getElementById("submitForm");
+            form.method = method;
+            form.submit();
+        }
+    </script>
+</body>
+</html>
